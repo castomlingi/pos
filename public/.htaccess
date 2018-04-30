@@ -4,7 +4,7 @@ RewriteEngine On
 # replace values between <> with your ones
 RewriteCond %{HTTP_HOST} ^<pos101>\.<herokuapp>\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.<pos101>\.<herokuapp>\.com$
-# RewriteRule ^/?$ "https\:\/\/www\.<herokuapp>\.com\/<OSPOS path>" [R=301,L]
+RewriteRule ^/?$ "https\:\/\/www\.<herokuapp>\.com\/<POS path>" [R=301,L]
 
 # To rewrite "domain.com -> www.domain.com" uncomment the following lines.
  RewriteCond %{HTTPS} !=on
