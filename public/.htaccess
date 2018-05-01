@@ -2,15 +2,15 @@ RewriteEngine On
 
 # To redirect a subdomain to a subdir because of https not supporting wildcards
 # replace values between <> with your ones
-# RewriteCond %{HTTP_HOST} ^<OSPOS subdomain>\.<my web domain>\.com$ [OR]
-# RewriteCond %{HTTP_HOST} ^www\.<OSPOS subdomain>\.<my web domain>\.com$
-# RewriteRule ^/?$ "https\:\/\/www\.<my web domain>\.com\/<OSPOS path>" [R=301,L]
+RewriteCond %{HTTP_HOST} ^<pos101>\.<herokuapp>\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.<pos101>\.<herokuapp>\.com$
+RewriteRule ^/?$ "https\:\/\/www\.<herokuapp>\.com\/<POS path>" [R=301,L]
 
 # To rewrite "domain.com -> www.domain.com" uncomment the following lines.
-# RewriteCond %{HTTPS} !=on
-# RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
-# RewriteCond %{HTTP_HOST} (.+)$ [NC]
-# RewriteRule ^(.*)$ http://www.%1/$1 [R=301,L]
+ RewriteCond %{HTTPS} !=on
+ RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
+ RewriteCond %{HTTP_HOST} (.+)$ [NC]
+ RewriteRule ^(.*)$ http://www.%1/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 # if in web root
